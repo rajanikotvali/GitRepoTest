@@ -3,7 +3,10 @@
   <groupId>com.valuelabs.jdbctemplate.batchupdate</groupId>
   <artifactId>JdbcTemplateBatchUpdate</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <version>1.0</version>
   <name>JdbcTemplateBatchUpdate</name>
+  <url>http://maven.apache.org</url>
   <build>
     <plugins>
       <plugin>
@@ -14,13 +17,24 @@
           <target>1.7</target>
         </configuration>
       </plugin>
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
     </plugins>
     <sourceDirectory>src/main/java</sourceDirectory>
   </build>
   <properties>
   	<spring.version>4.0.4.RELEASE</spring.version>
   </properties>
-  <url>http://maven.apache.org</url>
   <dependencies>
   	<dependency>
   		<groupId>org.springframework</groupId>
