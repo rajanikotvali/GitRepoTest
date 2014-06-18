@@ -12,5 +12,6 @@ public class App
         System.out.println( "This is next line for testing" );
 	System.out.println( "I  am testing1" );
 	System.out.println( "I  am testing2" )
+	System.out.println(" This is other line for auto build");
     }
 }
